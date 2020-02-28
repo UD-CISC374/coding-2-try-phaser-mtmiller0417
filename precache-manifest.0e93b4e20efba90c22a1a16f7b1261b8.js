@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/ship-small.png"
   },
   {
-    "revision": "8661b4af564556676f9285ed3d41eeec",
+    "revision": "d4605fa205eb9fc184501ca309a03903",
     "url": "index.html"
   },
   {
-    "revision": "a75ad1fb10760baa015d",
-    "url": "main.597313ba8b52df1ade7c.bundle.js"
+    "revision": "f0819b87d81c9edb8038",
+    "url": "main.eda95f8e7095dc1dee89.bundle.js"
   },
   {
     "revision": "b4321e6f6a88a978d4964c0d1b432b03",

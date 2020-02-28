@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-mtmiller0417/devgen.vendors.a047ee0740c7d21714d9.bundle.js"
   },
   {
-    "revision": "7a06c164a6a77c45c1c58e9b614ad45e",
+    "revision": "ed9cca2bc4bc652ba01af9a07d0df4b7",
     "url": "/coding-2-try-phaser-mtmiller0417/devindex.html"
   },
   {
