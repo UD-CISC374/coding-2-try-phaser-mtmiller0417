@@ -32,15 +32,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-mtmiller0417/alphaassets/ship-small.png"
   },
   {
-    "revision": "e63d8831afbd2b71f4dd",
-    "url": "/coding-2-try-phaser-mtmiller0417/alphagen.main.ecfeaa2509e347603a09.bundle.js"
+    "revision": "d44b51d768f4860fd316",
+    "url": "/coding-2-try-phaser-mtmiller0417/alphagen.main.ed6cd82a7b205734a116.bundle.js"
   },
   {
     "revision": "201b65bee9df6270f739",
     "url": "/coding-2-try-phaser-mtmiller0417/alphagen.vendors.a047ee0740c7d21714d9.bundle.js"
   },
   {
-    "revision": "06cbc9ada421c8fcb8804c053cfc9997",
+    "revision": "b3cd586828cf357a9362e4c7b008d7e1",
     "url": "/coding-2-try-phaser-mtmiller0417/alphaindex.html"
   },
   {
