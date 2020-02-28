@@ -1,7 +1,7 @@
 export default class Asteroid extends Phaser.GameObjects.Sprite {
 
-    maxVelocity:number = 8;
-    minVelocity:number = 4;
+    maxVelocity:number = 7;
+    minVelocity:number = 3;
 
     x_vel:number = 0;
     y_vel:number = 0;

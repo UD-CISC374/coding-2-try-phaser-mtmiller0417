@@ -15,20 +15,16 @@ export default class PreloadScene extends Phaser.Scene {
   }
 
   preload() {
-    //this.load.image('play-button','./../../assets/play-button-1.png');
-    this.load.image('play-button','./assets/ship-small.png');
-    //this.load.audio('music','../../assets/background-music.ogg');
+    this.load.image('play-button','assets/play-button-1.png');
+    this.load.audio('music','assets/background-music.ogg');
   }
 
   create() {
-
-    //this.scene.start('GameScene');
-
-    /*if(!Sound.sound_playing){
+    if(!Sound.sound_playing){
       this.music = this.sound.add('music',{loop: true});
       this.music.play();
       Sound.sound_playing = true;
-    }*/
+    }
 
     this.play_button = this.add.image(0,0,'play-button');
     // Center the play button
@@ -38,6 +34,14 @@ export default class PreloadScene extends Phaser.Scene {
     // When the button is clicked on, start the main scene
     this.play_button.on('pointerup', () => {
       this.scene.start('GameScene');
+    });
+    // When the button is hovered over
+    this.play_button.on('pointerover',() => {
+      this.play_button.setScale(1.1);
+    });
+    //When the button is not hovered over
+    this.play_button.on('pointerout',() => {
+      this.play_button.setScale(1);
     });
   }
 

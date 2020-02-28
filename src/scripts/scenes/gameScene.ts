@@ -31,23 +31,23 @@ export default class GameScene extends Phaser.Scene{
     preload() {
       // Load background image
       //this.load.image('background','../../assets/back-reduced.png');
-      this.load.image('background','./assets/back-reduced.png');
-      //this.load.audio('music','../../assets/background-music.ogg');
+      this.load.image('background','assets/back-reduced.png');
+      //this.load.audio('music','assets/background-music.ogg');
 
       // Load spritesheet for the ship
-      this.load.spritesheet('ship-small','./assets/ship-small.png',{
+      this.load.spritesheet('ship-small','assets/ship-small.png',{
         frameWidth: 60,
         frameHeight: 70 
       });
 
       // Load spritesheet for the asteroid
-      this.load.spritesheet('asteroid-sprite-big','./assets/asteroid-sprite-big.png',{
+      this.load.spritesheet('asteroid-sprite-big','assets/asteroid-sprite-big.png',{
         frameWidth: 100,
         frameHeight: 197/2 
       });
 
       // Load spritesheet for explosion
-      this.load.spritesheet('explosion','./assets/explosion-small.png',{
+      this.load.spritesheet('explosion','assets/explosion-small.png',{
         frameWidth: 600/12,
         frameHeight: 50
       });
