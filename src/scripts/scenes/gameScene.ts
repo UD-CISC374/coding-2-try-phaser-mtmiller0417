@@ -1,6 +1,7 @@
 import SpaceShip from '../objects/spaceShip';
 import Asteroid from '../objects/asteroid';
 import Sound from '../sound'
+import Time from '../time'
 
 
 export default class GameScene extends Phaser.Scene{
@@ -11,6 +12,10 @@ export default class GameScene extends Phaser.Scene{
     private background: Phaser.GameObjects.TileSprite;
 
     private cursorKeys: Phaser.Types.Input.Keyboard.CursorKeys;
+
+    private bestTime: Phaser.GameObjects.Text;
+    private elapsedTime: Phaser.GameObjects.Text;
+    private seconds:number;
 
     private sceneWidth:number;
     private sceneHeight:number;
@@ -29,10 +34,9 @@ export default class GameScene extends Phaser.Scene{
     }
   
     preload() {
+
       // Load background image
-      //this.load.image('background','../../assets/back-reduced.png');
       this.load.image('background','assets/back-reduced.png');
-      //this.load.audio('music','assets/background-music.ogg');
 
       // Load spritesheet for the ship
       this.load.spritesheet('ship-small','assets/ship-small.png',{
@@ -101,10 +105,26 @@ export default class GameScene extends Phaser.Scene{
         repeat: 0,
         hideOnComplete: true
       });
-    
+
+      // Create best-time label
+      this.bestTime = this.add.text(this.sceneWidth,5,'Best Time ' + this.getFormattedTime(Time.bestTime), {
+        font: 'bold 20px Sans-Serif',
+        fill: 'white'
+      });
+      this.bestTime.setOrigin(0,0);
+      this.bestTime.setX(this.sceneWidth - this.bestTime.width - 5);
+
+      // Create elapsed-time label
+      this.elapsedTime = this.add.text(5,5,'00:00', {
+        font: 'bold 20px Sans-Serif',
+        fill: 'white'
+      });
+      this.elapsedTime.setOrigin(0,0);
+      // Start the clock
+      new Time(this);
+      this.seconds = 0;
 
       this.cursorKeys = this.input.keyboard.createCursorKeys();
-      //this.spaceShip
 
       // Add physics 
       this.physics.world.enable(this.spaceShip);
@@ -119,10 +139,36 @@ export default class GameScene extends Phaser.Scene{
       this.moveShipManager(5);
       this.rotateShip();
       this.moveAsteroids();
+      this.updateTime();
+    }
+
+    getFormattedTime(seconds:number):string{
+      let mins:number = Math.floor(seconds / 60);
+      let secs:number = seconds % 60;
+      let time:string = '';
+      if(mins < 10)
+        time = '0'+mins+':';
+      else  
+        time = mins+':';
+      if(secs < 10)
+        time += '0'+secs;
+      else
+        time += secs;
+      return time;
+    }
+
+    updateTime(){
+      let elapsed:number = Math.floor(this.time.now/1000) - Time.startTime;
+      this.seconds = elapsed;
+      
+      this.elapsedTime.setText(this.getFormattedTime(elapsed));
     }
 
     // Checks if an asteroid has collided with the ship
     collisionDetected(ship, asteroid){
+      // Check if this is the best time
+      if(this.seconds > Time.bestTime)
+        Time.bestTime = this.seconds;
       // Play explosion animation
       ship.destroy();
       this.explosion = this.add.sprite(this.spaceShip.x, this.spaceShip.y,'explosion');
