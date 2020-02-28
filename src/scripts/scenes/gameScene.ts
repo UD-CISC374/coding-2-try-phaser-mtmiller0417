@@ -60,7 +60,7 @@ export default class GameScene extends Phaser.Scene{
         this.music.play();
         Sound.sound_playing = true;
       }*/
-
+      
       this.background = this.add.tileSprite(0,0,this.sceneWidth, this.sceneHeight,'background');
       this.background.setOrigin(0,0);
 
