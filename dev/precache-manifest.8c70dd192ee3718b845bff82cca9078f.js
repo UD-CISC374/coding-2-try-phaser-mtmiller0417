@@ -8,6 +8,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-mtmiller0417/devassets/back-reduced.png"
   },
   {
+    "revision": "1406fa0f24cd98765107ebc90096ebad",
+    "url": "/coding-2-try-phaser-mtmiller0417/devassets/background-music.ogg"
+  },
+  {
     "revision": "637c0f86b4b891f1ec0118dece4cf031",
     "url": "/coding-2-try-phaser-mtmiller0417/devassets/citations.md"
   },
