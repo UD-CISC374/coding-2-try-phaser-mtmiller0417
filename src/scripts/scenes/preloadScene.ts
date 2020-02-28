@@ -21,7 +21,7 @@ export default class PreloadScene extends Phaser.Scene {
 
   create() {
 
-    //this.scene.start('GameScene');
+    this.scene.start('GameScene');
 
     if(!Sound.sound_playing){
       this.music = this.sound.add('music',{loop: true});
