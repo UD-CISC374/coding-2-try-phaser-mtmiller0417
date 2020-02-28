@@ -25,19 +25,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "cd1a0b292d8edb6429db8667dd2b8e8c",
-    "url": "assets/play-button-1.PNG"
+    "url": "assets/play-button-1.png"
   },
   {
     "revision": "0441510e5eff23227305422d3e5472b6",
     "url": "assets/ship-small.png"
   },
   {
-    "revision": "b2344a241fa6eab5db44c16f12951dd8",
+    "revision": "361529349e65aa1c9eaf581c149ad2b6",
     "url": "index.html"
   },
   {
-    "revision": "e2ce50d5e738881033b9",
-    "url": "main.89a5504e739e410f005d.bundle.js"
+    "revision": "f15c8edb674dee9f000c",
+    "url": "main.3eec207cbbf14745ab5a.bundle.js"
   },
   {
     "revision": "b4321e6f6a88a978d4964c0d1b432b03",
